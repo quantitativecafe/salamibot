@@ -48,8 +48,8 @@ void handle_command(char *str) {
   tokens[n] = strtok(str, s);
   
   // Get rest of tokens
-  while(tokens[n++] != NULL) {
-    tokens[n] = strtok(NULL, s);
+  while(tokens[n] != NULL) {
+    tokens[++n] = strtok(NULL, s);
   }
 
   // Process tokens
